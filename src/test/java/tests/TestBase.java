@@ -20,7 +20,7 @@ public class TestBase {
 
         Configuration.remote = "https://" + System.getProperty("login") + "@" + System.getProperty("remote");
         Configuration.browserSize = System.getProperty("browserSize");
-        Configuration.browser = System.getProperty("browserName");
+        Configuration.browser = System.getProperty("browserName", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion");
 
         RestAssured.baseURI = "https://demoqa.com";
