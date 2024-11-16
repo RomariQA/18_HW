@@ -11,7 +11,7 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class LoginException implements BeforeEachCallback {
 
-    @Step("Подготовка. Авторизация")
+    @Step("Подготовка - Авторизация")
     @Override
     public void beforeEach (ExtensionContext context){
         String token = AuthorizationApi.getAuthCookie().getToken();
