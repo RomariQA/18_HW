@@ -13,7 +13,7 @@ import static io.restassured.RestAssured.given;
 
 public class BasketApi {
 
-    @Step("Добавление товара в корзину")
+    @Step("Подготовка. Добавление товара в корзину")
     public static String addBookToBasket(){
 
         TestData testData = new TestData();
@@ -32,7 +32,7 @@ public class BasketApi {
                 .spec(ResponseSpec201).toString();
     }
 
-    @Step("Удаление всех товаров с корзины")
+    @Step("ПОдготовка. Удаление всех товаров с корзины")
     public static String deleteAllBooksFromBasket(){
 
         TestData testData = new TestData();
