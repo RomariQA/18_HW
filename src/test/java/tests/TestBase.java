@@ -21,10 +21,10 @@ public class TestBase {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
 
-//        Configuration.remote = System.getProperty("remoteURL");
-//        Configuration.browserSize = System.getProperty("browserSize");
-//        Configuration.browser = System.getProperty("browser");
-//        Configuration.browserVersion = System.getProperty("browserVersion");
+        Configuration.remote = System.getProperty("remoteURL");
+        Configuration.browserSize = System.getProperty("browserSize");
+        Configuration.browser = System.getProperty("browser");
+        Configuration.browserVersion = System.getProperty("browserVersion");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
