@@ -1,6 +1,7 @@
 package api;
 
 
+import io.qameta.allure.Step;
 import models.BasketAddRequestModel;
 import models.BusketAddRequestCollectionModel;
 import data.TestData;
@@ -12,6 +13,7 @@ import static io.restassured.RestAssured.given;
 
 public class BasketApi {
 
+    @Step("Добавление товара в корзину")
     public static String addBookToBasket(){
 
         TestData testData = new TestData();
@@ -30,6 +32,7 @@ public class BasketApi {
                 .spec(ResponseSpec201).toString();
     }
 
+    @Step("Удаление всех товаров с корзины")
     public static String deleteAllBooksFromBasket(){
 
         TestData testData = new TestData();

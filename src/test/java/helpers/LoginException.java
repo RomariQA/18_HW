@@ -1,6 +1,7 @@
 package helpers;
 
 import api.AuthorizationApi;
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.extension.BeforeEachCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.openqa.selenium.Cookie;
@@ -10,6 +11,7 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class LoginException implements BeforeEachCallback {
 
+    @Step("Авторизация")
     @Override
     public void beforeEach (ExtensionContext context){
         String token = AuthorizationApi.getAuthCookie().getToken();
