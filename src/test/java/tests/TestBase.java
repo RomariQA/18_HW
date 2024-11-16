@@ -17,14 +17,16 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll(){
-        RestAssured.baseURI = "https://demoqa.com";
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.pageLoadStrategy = "eager";
 
         Configuration.remote = "https://" + System.getProperty("login") + "@" + System.getProperty("remote");
         Configuration.browserSize = System.getProperty("browserSize");
         Configuration.browser = System.getProperty("browserName");
         Configuration.browserVersion = System.getProperty("browserVersion");
+
+        RestAssured.baseURI = "https://demoqa.com";
+        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.pageLoadStrategy = "eager";
+
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
