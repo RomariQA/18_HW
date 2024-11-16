@@ -52,3 +52,9 @@ tasks.withType(Test) {
         }
     }
 }
+
+task allTests(type: Test) {
+    useJUnitPlatform {
+        includeTags("REGRESS")
+    }
+}
