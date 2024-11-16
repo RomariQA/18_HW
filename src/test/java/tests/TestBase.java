@@ -23,7 +23,7 @@ public class TestBase {
 
         Configuration.remote = System.getProperty("remoteURL");
         Configuration.browserSize = System.getProperty("browserSize");
-        Configuration.browser = System.getProperty("browser");
+        Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
