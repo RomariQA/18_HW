@@ -38,11 +38,10 @@ dependencies {
             "io.rest-assured:json-schema-validator:$restAssuredVersion",
             "io.qameta.allure:allure-rest-assured:$allureVersion",
             "com.codeborne:selenide:$selenideVersion",
-            "org.junit.jupiter:junit-jupiter:$allureVersion",
+            "org.junit.jupiter:junit-jupiter:5.11.1",
             'org.assertj:assertj-core:3.26.3',
             'org.slf4j:slf4j-simple:2.0.16'
     )
-    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.11.1')
 }
 
 tasks.withType(Test) {
