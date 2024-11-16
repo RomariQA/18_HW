@@ -20,7 +20,7 @@ public class AuthorizationApi {
         return given(RequestSpec)
                 .body(request)
                 .when()
-                .post("https://demoqa.com/Account/v1/Login")
+                .post("/Account/v1/Login")
                 .then()
                 .spec(ResponseSpec200)
                 .extract().as(LoginResponseModel.class);
