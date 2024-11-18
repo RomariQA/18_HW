@@ -10,9 +10,7 @@ import static io.restassured.RestAssured.given;
 public class AuthorizationApi {
 
     public static LoginResponseModel getAuthCookie(){
-        LoginRequestModel request = new LoginRequestModel();
-        request.setUserName(System.getProperty("userName"));
-        request.setPassword(System.getProperty("userPassword"));
+        LoginRequestModel request = new LoginRequestModel(System.getProperty("userName"),System.getProperty("userPassword"));
 
         return given(RequestSpec)
                 .body(request)
