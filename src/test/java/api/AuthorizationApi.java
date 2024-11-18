@@ -14,8 +14,8 @@ public class AuthorizationApi {
     public static LoginResponseModel getAuthCookie(){
         TestData testData = new TestData();
         LoginRequestModel request = new LoginRequestModel();
-        request.setUserName(testData.getUserName());
-        request.setPassword(testData.getUserPassword());
+        request.setUserName(System.getProperty("userName"));
+        request.setPassword(System.getProperty("userPassword"));
 
         return given(RequestSpec)
                 .body(request)
