@@ -17,10 +17,8 @@ public class BasketApi {
     public static String addBookToBasket(){
 
         TestData testData = new TestData();
-        BasketAddRequestModel request = new BasketAddRequestModel();
         BusketAddRequestCollectionModel isbnModel = new BusketAddRequestCollectionModel(testData.getTestBook());
-        request.setUserId(testData.getUserId());
-        request.setCollectionOfIsbns(List.of(isbnModel));
+        BasketAddRequestModel request = new BasketAddRequestModel(testData.getUserId(), List.of(isbnModel));
 
         return given(RequestSpec)
                 .header("Authorization", "Bearer " + AuthorizationApi.getAuthCookie().getToken())
