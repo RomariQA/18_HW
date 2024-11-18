@@ -18,8 +18,7 @@ public class BasketApi {
 
         TestData testData = new TestData();
         BasketAddRequestModel request = new BasketAddRequestModel();
-        BusketAddRequestCollectionModel isbnModel = new BusketAddRequestCollectionModel();
-        isbnModel.setIsbn(testData.getTestBook());
+        BusketAddRequestCollectionModel isbnModel = new BusketAddRequestCollectionModel(testData.getTestBook());
         request.setUserId(testData.getUserId());
         request.setCollectionOfIsbns(List.of(isbnModel));
 
